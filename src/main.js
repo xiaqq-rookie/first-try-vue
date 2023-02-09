@@ -3,15 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-// import global_ from './components/common/Global.vue'
 
 Vue.use(VueAxios, axios)
 axios.defaults.baseURL = 'http://localhost:8081'
 Vue.prototype.$axios = axios
-// Vue.prototype.GLOBAL = global_
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
